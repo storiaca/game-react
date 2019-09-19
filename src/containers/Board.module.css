@@ -1,0 +1,10 @@
+.Container {
+  display: flex;
+}
+.SquareGrid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  width: 60vmin;
+  height: 60vmin;
+}
