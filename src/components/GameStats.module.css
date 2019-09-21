@@ -1,3 +1,5 @@
 .GameStats {
   background-color: aquamarine;
+  text-align: left;
+  padding: 8px;
 }
