@@ -1,4 +1,15 @@
+/* Colors
+  #787b4a - need to click square
+*/
 .Square {
-  background-color: #eee;
+  background-color: #f9faee;
   border: 1px solid #888;
+}
+
+.Square-Click {
+  background-color: #407577;
+}
+
+.Square-Next-Click {
+  background-color: #d3d36f;
 }
