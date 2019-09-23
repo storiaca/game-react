@@ -1,4 +1,11 @@
 import React, { Component } from "react";
+import knightTour, {
+  getPossibleMoves,
+  isMoveAllowed,
+  isBoardCompletelyVisited,
+  knightTourRecursive,
+  knightTourRecursive
+} from "../utils/knightTour";
 import GameStats from "../components/GameStats";
 import Square from "../components/Square";
 import classes from "./Board.module.css";
