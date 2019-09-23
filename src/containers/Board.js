@@ -3,7 +3,6 @@ import knightTour, {
   getPossibleMoves,
   isMoveAllowed,
   isBoardCompletelyVisited,
-  knightTourRecursive,
   knightTourRecursive
 } from "../utils/knightTour";
 import GameStats from "../components/GameStats";
