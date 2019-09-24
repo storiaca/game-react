@@ -3,7 +3,7 @@
  * @param {number[]} position
  * @return {number[][]}
  */
-export function getPossibleMoves(chessboard, position) {
+export const getPossibleMoves = (chessboard, position) => {
   // Generate all knight moves (even those that go beyond the board).
   const possibleMoves = [
     [position[0] - 1, position[1] - 2],
@@ -23,35 +23,35 @@ export function getPossibleMoves(chessboard, position) {
       move[0] >= 0 && move[1] >= 0 && move[0] < boardSize && move[1] < boardSize
     );
   });
-}
+};
 
 /**
  * @param {number[][]} chessboard
  * @param {number[]} move
  * @return {boolean}
  */
-export function isMoveAllowed(chessboard, move) {
+export const isMoveAllowed = (chessboard, move) => {
   return chessboard[move[0]][move[1]] !== 1;
-}
+};
 
 /**
  * @param {number[][]} chessboard
  * @param {number[][]} moves
  * @return {boolean}
  */
-export function isBoardCompletelyVisited(chessboard, moves) {
+export const isBoardCompletelyVisited = (chessboard, moves) => {
   const totalPossibleMovesCount = chessboard.length ** 2;
   const existingMovesCount = moves.length;
 
   return totalPossibleMovesCount === existingMovesCount;
-}
+};
 
 /**
  * @param {number[][]} chessboard
  * @param {number[][]} moves
  * @return {boolean}
  */
-export function knightTourRecursive(chessboard, moves) {
+export const knightTourRecursive = (chessboard, moves) => {
   const currentChessboard = chessboard;
 
   // If board has been completely visited then we've found a solution.
@@ -89,13 +89,13 @@ export function knightTourRecursive(chessboard, moves) {
 
   // Return false if we haven't found solution.
   return false;
-}
+};
 
 /**
  * @param {number} chessboardSize
  * @return {number[][]}
  */
-export default function knightTour(chessboardSize) {
+const knightTour = chessboardSize => {
   // Init chessboard.
   const chessboard = Array(chessboardSize)
     .fill(null)
@@ -113,4 +113,6 @@ export default function knightTour(chessboardSize) {
   const solutionWasFound = knightTourRecursive(chessboard, moves);
 
   return solutionWasFound ? moves : [];
-}
+};
+
+export default knightTour;
