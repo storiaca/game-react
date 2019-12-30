@@ -16,6 +16,8 @@ class Board extends Component {
     level: 1
   };
 
+  
+
   render() {
     const n = 100;
     const squareBoard = [...Array(n)].map((e, i) => (
